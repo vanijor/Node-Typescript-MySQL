@@ -36,6 +36,11 @@ Compilar o arquivo Typescript
 npx tsc
 ```
 
+Executar as migrations para criar as tabelas no banco de dados.
+```
+npx typeorm migration:run -d dist/data-source.js
+```
+
 Executar o arquivo gerado com Node.js
 ```
 node dist/index.js
@@ -59,4 +64,17 @@ npm install mysql2 --save
 Comando SQL para criar a base de dados.
 ```
 CREATE DATABASE equipamentos CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+Criar a migrations que sera usada para criar as tabelas no banco de dados.
+```
+npx typeorm migration:create src/migration/<nome-da-migration>
+```
+```
+npx typeorm migration:create src/migration/CreateUsersTable
+```
+
+Executar as migrations para criar as tabelas no banco de dados.
+```
+npx typeorm migration:run -d dist/data-source.js
 ```

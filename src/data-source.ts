@@ -1,5 +1,6 @@
 import 'reflect-metadata'
 import { DataSource } from 'typeorm'
+import { User } from './entity/User'
 
 export const AppDataSource = new DataSource({
   type: "mysql",
@@ -10,7 +11,15 @@ export const AppDataSource = new DataSource({
   database: "equipamentos",
   synchronize: true,
   logging: true,
-  entities: [],
+  entities: [User],
   subscribers: [],
-  migrations: [],
+  migrations: [__dirname + '/migration/*.js'],
+})
+
+//Inicializar a conexão com o banco de dados
+AppDataSource.initialize()
+.then(() => {
+  console.log('Conexão com o banco de dados realizada com sucesso')
+}).catch((error) => {
+  console.log('Erro na conexão com o banco de dados: ', error)
 })
