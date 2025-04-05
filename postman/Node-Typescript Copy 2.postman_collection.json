@@ -11,6 +11,15 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"vanessa\",\r\n    \"email\": \"vanessa@email.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:8080/users",
 					"protocol": "http",
@@ -50,7 +59,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/users/2",
+					"raw": "http://localhost:8080/users/3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -58,7 +67,7 @@
 					"port": "8080",
 					"path": [
 						"users",
-						"2"
+						"3"
 					]
 				}
 			},
@@ -88,6 +97,26 @@
 					"path": [
 						"users",
 						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"5"
 					]
 				}
 			},
