@@ -41,6 +41,13 @@ Executar as migrations para criar as tabelas no banco de dados.
 npx typeorm migration:run -d dist/data-source.js
 ```
 
+Permitir Requisições externa
+```
+npm install cors
+```
+npm install --save-dev @types/cors
+```
+
 Executar o arquivo gerado com Node.js
 ```
 node dist/index.js
