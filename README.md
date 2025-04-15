@@ -31,10 +31,10 @@ Gerar o arquivo de configuração para o Typescript.
 npx tsc --init
 ```
 
-Compilar o arquivo Typescript
+<!-- Compilar o arquivo Typescript
 ```
 npx tsc
-```
+``` -->
 
 Executar as migrations para criar as tabelas no banco de dados.
 ```
@@ -48,10 +48,20 @@ npm install cors
 npm install --save-dev @types/cors
 ```
 
-Executar o arquivo gerado com Node.js
+Instalar a dependência para rodar processo simultâneamente
 ```
-node dist/index.js
+npm install --save-dev concurrently
 ```
+
+Compilar o arquivo Typescript. Executar o arquivo gerado
+```
+npm run start:watch
+```
+
+<!-- Executar o arquivo gerado com Node.js.
+```
+node dist/index.js.
+``` -->
 
 Instalar as dependências para conectar o Node.js (Typescript) com o banco de dados.
 ```
